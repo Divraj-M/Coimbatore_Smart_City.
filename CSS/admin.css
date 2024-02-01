@@ -1,0 +1,64 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    color: #fff;
+}
+
+.dashboard-container {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.dashboard-header {
+    margin-bottom: 20px;
+}
+
+.dashboard-statistic {
+    display: flex;
+    justify-content: space-around;
+}
+
+.statistic-box {
+    background-color: #14c20e;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.statistic-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.statistic-label {
+    font-size: 14px;
+}
+
+.dashboard-content {
+    text-align: left;
+}
+
+.filter-options {
+    margin-top: 20px;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

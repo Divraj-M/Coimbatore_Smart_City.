@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT_Smart_City</title>
+    <link rel="icon" href="/img/kovi web logo.png">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/wastemanage.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://kit.fontawesome.com/027c56105b.js" crossorigin="anonymous"></script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js" charset="utf-8"></script>
+
+</head>
+<body>
+    <div class="index-container">
+        <section>
+            <header>
+                <nav>
+                    <div id="logo"><img src="/img/kovi web logo.png" alt="" height="100px" width="100px"></div>
+                    <div id="nav-item">
+                        <ul>
+                           <div class="tag"> <li><a href="">About</a></li>
+                            <li><a href="">Project</a></li>
+                            <li><a href="">Mission</a></li></div>
+                            <li><a href="">Report</a></li>
+                            <li><button id="getstart-btn">GET START</button></li>
+                        </ul>
+                        
+                    </div>
+                </nav>
+            <div id="wast_mange-head_img">
+                <div class="wastman-banner_cont">
+                <h1>Waste Management</h1>
+                <p>Reducing landfill through recycling and composting for a cleaner Ciombatore corporation.</p>
+                <button id="report_btn">REPORT HERE</button>
+                </div>
+            </div>
+            </header>
+        </section>
+        <section id="wastman_sec-two">
+            <div class="wast-sec-two">
+                <h1>Waste <span>Management</span>
+                    <img src="/img/Group 39519.png" alt="">
+                </h1>
+                <p>OUR PROCESS</p>
+                <h3>Mission, Vision, and Values</h3>
+                <div class="wast-sec-two_cont">
+                    <div class="count_wast-two">
+                       <img src="/img/2.jpg" alt="">
+                       <h3><b>Mission</b></h3>
+                       <p>Spearheading a shift towords a sustainable and clean Ciombatore smart City is dedicated to implementing  innovative waste management initiatives and promoting responsible disposal practtices</p>
+                        <button type="submit">Learn more</button>
+                    </div>
+                    <div class="count_wast-two">
+                        <img src="/img/3.jpg" alt="">
+                        <h3><b>Vission</b></h3>
+                        <p>Environment a waste-free Coimbatore, we priortize sustainability,emhasizing long-term well-being through advanced recycling,community education, and composting, fostering a healthier and more environment conscious city</p>
+
+                    <button type="submit">Learn more</button>
+                    </div>
+                    <div class="count_wast-two">
+                        <img src="/img/1.jpg" alt="">
+                        <h3><b>Values</b></h3>
+                        <p>uploading the long-term well-being of coimbatore,we prioritize sustainable waste management, ensuring the protection of our environment for future generations.</p>
+                        <button type="submit">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="wast-man_third-sec">
+            <div class="wast-man_cont-third">
+                <h1>Our Completed <span>Projects<img src="/img/Group 39519.png" alt=""></span></h1>
+                <p><b>Welcome to our showcase of successfully completed projects that have transformed coimbatore into a smarter, more sustainable city. Explore the visual journey of our accomplishment below</b></p>
+
+                <div class="wast-man_img-third" style="text-align: center;">
+                    <img src="/img/1.jpg" alt="" class="wast-man_img-third-1">
+                    <img src="/img/2.jpg" alt="">
+                    <img src="/img/3.jpg" alt="">
+                    <img src="/img/4.jpg" alt="">
+                    <!-- <img src="/img/1.jpg" alt=""> -->
+                    <div><h2>100+ <br>More</h2></div>
+                </div>
+            </div>
+        </section>
+        <div id="drak_wate-stack">
+            <div><h1>24+</h1>
+            <p><b>Burger Blisses across the country country</b></p></div>
+            <div>
+                <h1>17M</h1>
+                <p><b>Burger eaters and counting</b></p>
+            </div>
+            <div>
+                <h1>+95%</h1>
+                <p><b>Customer sastifaction</b></p>
+            </div>
+        </div>
+
+        <section id="wast_form-report">
+            <div class="waste_form-forth-cont">
+                <div class="waste-cont-report">
+                     <h1>Repo<span>rt<img src="/img/Group 39519.png" alt=""></span></h1>
+                     <p>Be a guardian of your city by reporting instances of improper waste  management. Follow these steps to ensure <br> a prompt and effective responce, contributing to Coimbatore's commitment to cleanliness and sustainability.</p>
+                </div>
+                <div class="report_bottom-form_cont">
+                <div class="contact-contain">
+                    <h2>Contact Us</h2>
+                    <form id="contactForm">
+                      <input type="text" id="name" name="name" placeholder="Your Name" required>
+                      <input type="email" id="email" name="email" placeholder="Your Email" required>
+                      <textarea id="message" name="message" placeholder="Your Message" required></textarea><br>
+                      <input type="hidden" role="uploadcare-uploader"
+                      data-public-key="b6fb424840940f9cdbfd"
+                      data-images-only="true"
+                      data-clearable="true"
+                      />
+
+            
+                      <a href="#" style="text-decoration: none;"></a><button type="submit" id="upload-reportform_submit"  class="btn" onclick="openPopup()">Submit</a></button>
+                      <div class="popup" id="popup">
+                        <img src="/img/404-tick.png" >
+                        <h2 >Dear <span style="color:green">Divraj</span></h2>
+                        <p>Thank You for your commitment to keeping coimbatore clean and sustainable.your report regarding improper waste Management has been Receives and is now under review.we appreciate your vigilance in contributing to the well-being of your community.</p>
+                        <a href="/HTML/track.html"><button type="button" onclick="closePopup()">Track here</button></a>
+                    </div>
+
+                        
+                        <script>
+                            let popup = document.getElementById("popup");
+                                    
+                            function openPopup(){
+                                popup.classList.add("open-popup");
+                            }
+                            function closePopup(){
+                                popup.classList.remove("open-popup");
+                            }
+                            </script>
+
+                      <br>
+                      <div class="ind-sub_icons">
+                        <span><i class="fa-brands fa-facebook-f" style="color: #41b011;"></i></span>
+                        <span><i class="fa-brands fa-twitter" style="color: #1bc918;"></i></span>
+                        <span><i class="fa-brands fa-square-instagram" style="color: #0edd26;"></i></span>
+                        <span><i class="fa-brands fa-linkedin-in" style="color: #35c40e;"></i></span>
+                        <span><i class="fa-brands fa-youtube" style="color: #2fb913;"></i></span>
+                        </div>
+                    </form>
+                    <script src="/JS/index.js"></script>
+                  </div>
+                    <div id="map" style="width:600px">
+
+
+                    </div>
+                
+                </div>
+            </div>
+            
+        </section>
+
+
+        <footer id="foot_cont">
+            <div class="foot_container">
+              <div class="foot_logo">
+                <h3><img src="/img/kovi web logo.png" alt="" height="100px" width="100px"></h3>
+  
+              </div>
+              <div class="foot_menutype">
+                <div class="foot_company">
+                  <h3><b>COMPANY</b></h3>
+                  <li><b>How it works</b></li>
+                  <b></b>
+                  <li><b>Pricing</b></li>
+                  <li><b>Demo</b></li>
+                </div>
+                <div class="foot_resources">
+                  <h3><b>RESOURCES</b></h3>
+                  <li><b>Blog post name goes here</b></li>
+                  <li><b>Blog post name goes here</b></li>
+                  <li><b>Blog post name goes here</b></li>
+                  <li><b>see all resources</b></li>
+                </div>
+                <div class="foot_about">
+                  <h3><b>ABOUT</b></h3>
+                  <li><b>Term & Conditions</b></li>
+                  <li><b>privacy policy</b></li>
+                </div>
+              </div>
+            </div>
+            <div class="foot_copyright">
+              <h3><b>Copyright 2022 Company name</b></h3>
+            </div>
+          </footer>
+    </div>           
+    <script>
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+          
+          // Get form data
+          var formData = new FormData(this);
+          
+          // Get uploaded image URL
+          var imageInput = uploadcare.Widget('[role=uploadcare-uploader]');
+          var file = imageInput.value();
+          if (file) {
+            file.done(function(fileInfo) {
+              formData.append("image", fileInfo.cdnUrl);
+              submitForm(formData);
+            });
+          } else {
+            submitForm(formData);
+          }
+        });
+        
+        function submitForm(formData) {
+          // Send form data to Formspree
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "https://formspree.io/f/xoqgjyka"); // Replace "YOUR_FORMSPREE_URL" with your Formspree form URL
+          xhr.setRequestHeader("Accept", "application/json");
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+              alert("The Problem is solved and Thank you for your intimation Like This..!.");
+              document.getElementById("contactForm").reset();
+            } else {
+              alert("Oops! Something went wrong. Please try again later.");
+            }
+          };
+          xhr.send(formData);
+        }
+                
+            </script>
+
+<script>
+    // Map initialization 
+    var map = L.map('map').setView([14.0860746, 100.608406], 6);
+
+    //osm layer
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+    osm.addTo(map);
+
+    if(!navigator.geolocation) {
+        console.log("Your browser doesn't support geolocation feature!")
+    } else {
+        setInterval(() => {
+            navigator.geolocation.getCurrentPosition(getPosition)
+        }, 5000);
+    }
+
+    var marker, circle;
+
+    function getPosition(position){
+        // console.log(position)
+        var lat = position.coords.latitude
+        var long = position.coords.longitude
+        var accuracy = position.coords.accuracy
+
+        if(marker) {
+            map.removeLayer(marker)
+        }
+
+        if(circle) {
+            map.removeLayer(circle)
+        }
+
+        marker = L.marker([lat, long])
+        circle = L.circle([lat, long], {radius: accuracy})
+
+        var featureGroup = L.featureGroup([marker, circle]).addTo(map)
+
+        map.fitBounds(featureGroup.getBounds())
+
+        console.log("Your coordinate is: Lat: "+ lat +" Long: "+ long+ " Accuracy: "+ accuracy)
+    }
+
+
+
+</script>
+
+</body>
+</html>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    // Map initialization 
+    var map = L.map('map').setView([14.0860746, 100.608406], 6);
+
+    //osm layer
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+    osm.addTo(map);
+
+    if(!navigator.geolocation) {
+        console.log("Your browser doesn't support geolocation feature!")
+    } else {
+        setInterval(() => {
+            navigator.geolocation.getCurrentPosition(getPosition)
+        }, 5000);
+    }
+
+    var marker, circle;
+
+    function getPosition(position){
+        // console.log(position)
+        var lat = position.coords.latitude
+        var long = position.coords.longitude
+        var accuracy = position.coords.accuracy
+
+        if(marker) {
+            map.removeLayer(marker)
+        }
+
+        if(circle) {
+            map.removeLayer(circle)
+        }
+
+        marker = L.marker([lat, long])
+        circle = L.circle([lat, long], {radius: accuracy})
+
+        var featureGroup = L.featureGroup([marker, circle]).addTo(map)
+
+        map.fitBounds(featureGroup.getBounds())
+
+        console.log("Your coordinate is: Lat: "+ lat +" Long: "+ long+ " Accuracy: "+ accuracy)
+    }
+</script>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="icon" href="/img/kovi web logo.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/CSS/admin.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"> <!-- Link to your custom CSS file -->
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <div class="dashboard-statistic">
+                <div class="statistic-box">
+                    <div class="statistic-value">100</div>
+                    <div class="statistic-label">Total Reports</div>
+                </div>
+                <div class="statistic-box">
+                    <div class="statistic-value">70</div>
+                    <div class="statistic-label">Solved Problems</div>
+                </div>
+                <div class="statistic-box">
+                    <div class="statistic-value">30</div>
+                    <div class="statistic-label">Unsolved Problems</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-options">
+            <label for="complaintType">Filter by Complaint Type:</label>
+            <select id="complaintType" class="form-control" onchange="filterComplaints()">
+                <option value="all">All Complaints</option>
+                <option value="yellowSpot">Yellow Spot</option>
+                <option value="septicOverflow">Overflow of Septic Tanks</option>
+                <option value="sewerOverflow">Overflow of Sewerage or Storm Water</option>
+                <option value="deadAnimal">Dead Animal</option>
+                <option value="dustbinsUncleaned">Dustbins Not Cleaned</option>
+                <option value="garbageDump">Garbage Dump</option>
+                <option value="garbageVehicleNotArrived">Garbage Vehicle Not Arrived</option>
+                <option value="sweepingNotDone">Sweeping Not Done</option>
+                <option value="noWaterSupply">No Water Supply in Public</option>
+            </select>
+        </div>
+
+        <div class="dashboard-content">
+            <h2>User Complaints</h2>
+            <div class="table-container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Area</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Complaint Type</th>
+                            <th>Photo</th>
+                            <th>Location Map</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Placeholder data -->
+                        <tr data-complaint-type="yellowSpot">
+                            <td>Jane Doe</td>
+                            <td>City Center</td>
+                            <td>987-654-3210</td>
+                            <td>jane.doe@example.com</td>
+                            <td>Yellow Spot</td>
+                            <td><img src="yellow-spot-photo.jpg" alt="Yellow Spot Photo" class="img-fluid"></td>
+                            <td><a href="#" target="_blank">View Map</a></td>
+                        </tr>
+                        <!-- Additional rows -->
+                        <tr data-complaint-type="septicOverflow">
+                            <td>John Smith</td>
+                            <td>Suburbia</td>
+                            <td>555-123-4567</td>
+                            <td>john.smith@example.com</td>
+                            <td>Overflow of Septic Tanks</td>
+                            <td><img src="septic-overflow-photo.jpg" alt="Septic Overflow Photo" class="img-fluid"></td>
+                            <td><a href="#" target="_blank">View Map</a></td>
+                        </tr>
+                        <tr data-complaint-type="garbageDump">
+                            <td>Alice Johnson</td>
+                            <td>Downtown</td>
+                            <td>111-222-3333</td>
+                            <td>alice.johnson@example.com</td>
+                            <td>Garbage Dump</td>
+                            <td><img src="garbage-dump-photo.jpg" alt="Garbage Dump Photo" class="img-fluid"></td>
+                            <td><a href="#" target="_blank">View Map</a></td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, needed for some Bootstrap features) -->
+    <script src="./bootstrap/js/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"> </script> <!-- Link to your custom JavaScript file -->
+</body>
+</html>

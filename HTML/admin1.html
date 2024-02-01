@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="icon" href="/img/kovi web logo.png">
+    <link rel="stylesheet" href="/CSS/admin1.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password (min 8 characters, at least one number and one special character)" pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$" required><br>
+            <a href="/HTML/dashboard.html"><button type="button" onclick="validateLogin()">Login</button></a>
+            <div class="success-message" id="successMessage"></div>
+            <div class="error-message" id="errorMessage"></div>
+        </form>
+    </div>
+
+    <script src="/JS/admin.js">
+        function validateLogin() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var successMessage = document.getElementById('successMessage');
+    var errorMessage = document.getElementById('errorMessage');
+
+    // Simulated server-side validation
+    if (password.length < 8 || !/[0-9]/.test(password) || !/[!@#$%^&*]/.test(password)) {
+        successMessage.innerText = ''; // Clear the success message if validation fails
+        errorMessage.innerText = 'Invalid password. Password must be at least 8 characters and contain at least one number and one special character.';
+    } else {
+        // Simulated login success
+        successMessage.innerText = 'You are successfully logged in!';
+        errorMessage.innerText = ''; // Clear the error message if login succeeds
+    }
+}
+
+    </script>
+</body>
+</html>
